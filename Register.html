@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Page</title>
+    </head>
+    <body>
+        <h2>Register here</h2>
+
+        <form id="RegisterForm">
+            <input type="text" id="UserID" placeholder="Enter Username" required><br><br>
+            <input type="text" id="Email" placeholder="Enter Email" required><br><br>
+            <input type="password" id="Password" placeholder="Enter password" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <script>
+            document.getElementById("RegisterForm").addEventListener("submit", async function(e){
+                e.preventDefault();
+
+                const UserID=document.getElementById("UserID").value;
+                const Email=document.getElementById("Email").value;
+                const Password=document.getElementById("Password").value;
+
+                const response= await fetch("http://localhost:3000/register", {
+                    method:"POST",
+                    headers:{
+                        "content-type":"application/json"
+                    },
+                    body: JSON.stringify({UserID,Email,Password})
+                })
+                
+                const data= await response.text();
+                alert(data);
+            });
+        </script>
+    </body>
+</html>
