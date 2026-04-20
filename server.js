@@ -35,7 +35,19 @@ app.post("/register", (req, res)=>{
         }
     });
 });
+app.post("/Login",(req,res)=>{
+    const{UserID,Password}=req.body;
 
+    const sql="SELECT*FROM user WHERE user.UserID=? AND user.Password=?";
+    db.query(sql,[UserID,Password],(err,result)=>{
+        if (err){
+            console.log(err);
+            res.status(500).send("Can't login");
+        }else{
+            res.send("Login successful");;
+        }
+    });   
+ });
 app.listen(3000,()=>{
     console.log("server running on http://localhost:3000");
 });

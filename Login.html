@@ -24,7 +24,12 @@
                     body:JSON.stringify({UserID,Password})
                 })
                 const data= await response.text();
+
+                if(data==="Login successful"){
+                    window.location.href = "Dashboard.html";
+                }else{
                 alert(data);
+                }
             });
         </script>
     </body>
