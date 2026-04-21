@@ -1,6 +1,295 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Dashboard</title>
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Management Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-left">
+          <span class="logo"></span>
+          <span>Project M.</span>
+        </div>
+        <span class="collapse">&#8249;&#8249;</span>
+      </div>
+
+      <nav class="nav">
+        <div class="nav-item"><span class="icon"></span> Home</div>
+        <div class="nav-item"><span class="icon"></span> Messages</div>
+        <div class="nav-item"><span class="icon"></span> Tasks</div>
+        <div class="nav-item"><span class="icon"></span> Members</div>
+        <div class="nav-item"><span class="icon"></span> Settings</div>
+      </nav>
+
+      <div>
+        <div class="section-title">MY PROJECTS</div>
+        <div class="projects">
+          <div class="project-item active">
+            <div class="project-left"><span class="dot green"></span><span>Mobile App</span></div>
+            <span>•••</span>
+          </div>
+          <div class="project-item">
+            <div class="project-left"><span class="dot yellow"></span><span>Website Redesign</span></div>
+          </div>
+          <div class="project-item">
+            <div class="project-left"><span class="dot lilac"></span><span>Design System</span></div>
+          </div>
+          <div class="project-item">
+            <div class="project-left"><span class="dot blue"></span><span>Wireframes</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="thought-card">
+        <div class="bulb">💡</div>
+        <h4>Thoughts Time</h4>
+        <p>We don’t have any notice for you, till then you can share your thoughts with your peers.</p>
+        <button>Write a message</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="search">
+          <span class="search-icon"></span>
+          <span>Search for anything...</span>
+        </div>
+
+        <div class="top-actions">
+          <span class="mini-icon"></span>
+          <span class="mini-icon"></span>
+          <span class="mini-icon"></span>
+
+          <div class="profile">
+            <div class="profile-info">
+              <h5>Anima Agrawal</h5>
+              <span>U.P, India</span>
+            </div>
+            <span class="avatar"></span>
+          </div>
+        </div>
+      </div>
+
+      <section class="content">
+        <div class="title-row">
+          <div class="title-group">
+            <h1>
+              Mobile App
+              <span class="small-pill">✎</span>
+              <span class="small-pill">🔗</span>
+            </h1>
+          </div>
+
+          <div class="team-area">
+            <span class="invite">+ Invite</span>
+            <div class="avatars">
+              <span class="avatar"></span>
+              <span class="avatar"></span>
+              <span class="avatar"></span>
+              <span class="avatar"></span>
+              <span class="extra">+2</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="left-controls">
+            <button class="btn">⎚ Filter ▾</button>
+            <button class="btn">🗓 Today ▾</button>
+          </div>
+
+          <div class="right-controls">
+            <button class="btn">👥 Share</button>
+            <button class="btn primary">☰</button>
+            <button class="btn">⋯</button>
+          </div>
+        </div>
+
+        <div class="kanban">
+          <div class="column purple-line">
+            <div class="column-header">
+              <div class="column-title">
+                <span class="dot purple"></span>
+                <span>To Do</span>
+                <span class="count">4</span>
+              </div>
+              <span class="small-pill small-add">+</span>
+            </div>
+
+            <div class="card">
+              <div class="card-top">
+                <span class="label low">Low</span>
+                <span class="more">…</span>
+              </div>
+              <h3>Brainstorming</h3>
+              <p>Brainstorming brings team members’ diverse experience into play.</p>
+              <div class="card-bottom">
+                <div class="members">
+                  <span class="avatar"></span>
+                  <span class="avatar"></span>
+                  <span class="avatar"></span>
+                </div>
+                <div class="meta">
+                  <span>💬 12 comments</span>
+                  <span>📁 0 files</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card active-card">
+              <div class="card-top">
+                <span class="label high">High</span>
+                <span class="more">…</span>
+              </div>
+              <h3>Research</h3>
+              <p>User research helps you to create an optimal product for users.</p>
+              <div class="card-bottom">
+                <div class="members">
+                  <span class="avatar"></span>
+                  <span class="avatar"></span>
+                </div>
+                <div class="meta">
+                  <span>💬 10 comments</span>
+                  <span>📁 3 files</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-top">
+                <span class="label high">High</span>
+                <span class="more">…</span>
+              </div>
+              <h3>Wireframes</h3>
+              <p>Low fidelity wireframes include the most basic content and visuals.</p>
+              <div class="card-bottom">
+                <div class="members">
+                  <span class="avatar"></span>
+                  <span class="avatar"></span>
+                  <span class="avatar"></span>
+                </div>
+                <div class="meta">
+                  <span>💬 8 comments</span>
+                  <span>📁 2 files</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column orange-line">
+            <div class="column-header">
+              <div class="column-title">
+                <span class="dot orange"></span>
+                <span>On Progress</span>
+                <span class="count">3</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-top">
+                <span class="label low">Low</span>
+                <span class="more">…</span>
+              </div>
+              <h3>Onboarding Illustrations</h3>
+              <p>Create warm, soft illustrations for the first user journey experience.</p>
+              <div class="wide-thumb"></div>
+              <div class="card-bottom">
+                <div class="members">
+                  <span class="avatar"></span>
+                  <span class="avatar"></span>
+                  <span class="avatar"></span>
+                </div>
+                <div class="meta">
+                  <span>💬 14 comments</span>
+                  <span>📁 15 files</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-top">
+                <span class="label low">Low</span>
+                <span class="more">…</span>
+              </div>
+              <h3>Moodboard</h3>
+              <div class="wide-thumbs">
+                <div class="wide-thumb"></div>
+                <div class="wide-thumb"></div>
+              </div>
+              <div class="card-bottom">
+                <div class="members">
+                  <span class="avatar"></span>
+                </div>
+                <div class="meta">
+                  <span>💬 9 comments</span>
+                  <span>📁 10 files</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column green-line">
+            <div class="column-header">
+              <div class="column-title">
+                <span class="dot blue"></span>
+                <span>Done</span>
+                <span class="count">2</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-top">
+                <span class="label completed">Completed</span>
+                <span class="more">…</span>
+              </div>
+              <h3>Mobile App Design</h3>
+              <div class="thumbs">
+                <div class="thumb"></div>
+                <div class="thumb"></div>
+                <div class="thumb"></div>
+              </div>
+              <div class="card-bottom">
+                <div class="members">
+                  <span class="avatar"></span>
+                  <span class="avatar"></span>
+                </div>
+                <div class="meta">
+                  <span>💬 12 comments</span>
+                  <span>📁 15 files</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-top">
+                <span class="label completed">Completed</span>
+                <span class="more">…</span>
+              </div>
+              <h3>Design System</h3>
+              <p>It just needs to adapt the UI from what you did before.</p>
+              <div class="card-bottom">
+                <div class="members">
+                  <span class="avatar"></span>
+                  <span class="avatar"></span>
+                  <span class="avatar"></span>
+                </div>
+                <div class="meta">
+                  <span>💬 12 comments</span>
+                  <span>📁 15 files</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
 </html>
