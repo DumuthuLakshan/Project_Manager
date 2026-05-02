@@ -16,7 +16,7 @@ app.use(session({
     resave:false,
     saveUninitialized:false,
     cookie:{
-        maxage:1000*60*60
+        maxAge: 1000 * 60 * 60
     }
 
 }))
@@ -57,11 +57,30 @@ app.post("/Login",(req,res)=>{
         if (err){
             console.log(err);
             res.status(500).send("Can't login");
-        }else{
+        }
+        if(result.length>0){
+            req.session.user={
+                UserID: result[0].UserID,
+                Email: result[0].Email
+            };
             res.send("Login successful");;
+        }else{
+            res.status.apply(401).send("Invalid username or password");
         }
     });   
  });
+ app.get("/session",(req,res)=>{
+    if(req.session.user){
+        res.json({
+            loggedIn:true,
+            user:req.session.user
+        });
+    }else{
+        res.json({
+            loggedIn:false
+        });
+    }
+ })
 app.listen(3000,()=>{
     console.log("server running on http://localhost:3000");
 });

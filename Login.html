@@ -16,11 +16,12 @@
                 const UserID=document.getElementById("UserID").value;
                 const Password=document.getElementById("Password").value;
 
-                const response=await fetch("http://localhost:3000/Login",{
+                const response=await fetch ("http://127.0.0.1:3000/Login",{
                     method:"POST",
                     headers:{
                         "content-type":"application/json"
                     },
+                    credentials:"include",
                     body:JSON.stringify({UserID,Password})
                 })
                 const data= await response.text();
